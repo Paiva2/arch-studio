@@ -10,7 +10,6 @@ module.exports = {
     "standard",
     "plugin:prettier/recommended",
   ],
-  "eslint.validate": ["javascript", "javascriptreact", "html", "typescriptreact"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
