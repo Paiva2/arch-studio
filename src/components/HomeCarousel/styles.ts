@@ -1,8 +1,8 @@
 import { styled } from "styled-components"
 
 export const CarouselWrapper = styled.section`
-  width: 55%;
-  max-width: 70rem;
+  width: 65%;
+  max-width: 75rem;
   position: relative;
 
   .keen-slider {
@@ -11,7 +11,7 @@ export const CarouselWrapper = styled.section`
 
     &.zoom-out {
       perspective: 1000px;
-      min-height: 650px;
+      min-height: 750px;
     }
 
     &.zoom-out__slide div {
@@ -28,12 +28,14 @@ export const CarouselWrapper = styled.section`
       height: 100%;
       object-fit: cover;
       position: absolute;
-      min-height: 650px;
+      min-height: 700px;
     }
   }
 `
 export const CarouselContent = styled.div`
   display: flex;
+  width: 100%;
+  height: 100%;
 `
 
 export const CarouselPages = styled.div`

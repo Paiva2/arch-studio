@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { CarouselContent, CarouselPages, CarouselWrapper } from "./styles"
 import { useKeenSlider, TrackDetails } from "keen-slider/react"
+import CarouselLinkArrow from "../../icons/CarouselLinkArrow"
 
 const images = [
   "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
@@ -54,16 +55,61 @@ const HomeCarousel = () => {
               <div
                 style={{
                   zIndex: "1000",
+                  width: "100%",
+                  alignItems: "center",
+                  height: "100%",
+                  display: "flex",
                 }}
               >
-                <h1>Project Paramour</h1>
+                <div
+                  style={{
+                    maxWidth: "700px",
+                    height: "100%",
+                    padding: "10.75rem 20px 0px 10.75rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                    wordBreak: "break-word",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontSize: "80px",
+                      color: "#fefffd",
+                    }}
+                  >
+                    Project Paramour
+                  </h1>
 
-                <p>
-                  Project made for an art museum near Southwest London. Project
-                  Paramour is a statement of bold, modern architecture.
-                </p>
-
-                <button>See Our Portfolio</button>
+                  <p
+                    style={{
+                      fontSize: "1rem",
+                      color: "#fefffd",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Project made for an art museum near Southwest London. Project
+                    Paramour is a statement of bold, modern architecture.
+                  </p>
+                  <a
+                    href="/"
+                    style={{
+                      all: "unset",
+                      backgroundColor: "#1c1d22",
+                      color: "#fefffd",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      fontWeight: "700",
+                      width: "50%",
+                      padding: "25px 20px",
+                      cursor: "pointer",
+                      gap: "20px",
+                    }}
+                  >
+                    See Our Portfolio <CarouselLinkArrow />
+                  </a>
+                </div>
               </div>
             </CarouselContent>
           </div>

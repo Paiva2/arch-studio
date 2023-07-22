@@ -10,7 +10,7 @@ function App() {
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
-          paddingTop: "3.125rem",
+          paddingTop: "30px",
         }}
       >
         <div
