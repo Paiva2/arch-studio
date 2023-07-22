@@ -60,20 +60,37 @@ const HomeCarousel = () => {
               <img src={content.image} />
               <CarouselTextsContainer>
                 <CarouselTextsWrapper>
-                  <motion.div
-                    key={titleRef.current}
-                    initial={{ opacity: 0, x: -150 }}
-                    animate={{ x: 0, y: 0, opacity: 1 }}
-                    transition={{
-                      duration: 0.4,
-                      ease: "easeIn",
-                    }}
-                  >
-                    <h1>{content.title}</h1>
-                    <p>{content.description}</p>
-                    <a>
+                  <motion.div className="motionDiv" key={titleRef.current}>
+                    <motion.h1
+                      initial={{ opacity: 0, y: -150 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 0.4,
+                        ease: "easeIn",
+                      }}
+                    >
+                      {content.title}
+                    </motion.h1>
+                    <motion.p
+                      initial={{ opacity: 0, x: -150 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 0.4,
+                        ease: "easeIn",
+                      }}
+                    >
+                      {content.description}
+                    </motion.p>
+                    <motion.a
+                      initial={{ opacity: 0, x: -150 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 0.4,
+                        ease: "easeIn",
+                      }}
+                    >
                       See Our Portfolio <CarouselLinkArrow />
-                    </a>
+                    </motion.a>
                   </motion.div>
                 </CarouselTextsWrapper>
               </CarouselTextsContainer>

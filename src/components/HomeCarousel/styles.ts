@@ -80,33 +80,36 @@ export const CarouselTextsWrapper = styled.div`
   max-width: 43.75rem;
   height: 100%;
   padding: 10.75rem 1.25rem 0px 10.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  word-break: break-word;
 
-  h1 {
-    font-size: 4.375rem;
-    color: #fefffd;
-  }
-
-  p {
-    font-size: 1rem;
-    color: #fefffd;
-    font-weight: 500;
-  }
-
-  a {
-    all: unset;
-    background-color: #1c1d22;
-    color: #fefffd;
+  .motionDiv {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 700;
-    width: 50%;
-    padding: 1.5625rem 1.25rem;
-    cursor: pointer;
+    flex-direction: column;
     gap: 1.25rem;
+    word-break: break-word;
+
+    h1 {
+      font-size: 4.375rem;
+      color: #fefffd;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #fefffd;
+      font-weight: 500;
+    }
+
+    a {
+      all: unset;
+      background-color: #1c1d22;
+      color: #fefffd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      width: 50%;
+      padding: 1.5625rem 1.25rem;
+      cursor: pointer;
+      gap: 1.25rem;
+    }
   }
 `
