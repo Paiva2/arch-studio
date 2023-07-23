@@ -2,6 +2,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import Home from "../Home"
+import GoTopButton from "../../components/GoTopButton"
 
 const Layout = () => {
   return (
@@ -10,6 +11,7 @@ const Layout = () => {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <GoTopButton />
       <Footer />
     </BrowserRouter>
   )

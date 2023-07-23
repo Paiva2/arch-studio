@@ -8,6 +8,7 @@ import {
   TopHomeIndicator,
   TopHomeIndicatorText,
 } from "./styles"
+import { Link } from "react-router-dom"
 
 const Header = () => {
   return (
@@ -19,13 +20,13 @@ const Header = () => {
         <NavItens>
           <MenuList>
             <li>
-              <a href="/">Portfolio</a>
+              <Link to="/">Portfolio</Link>
             </li>
             <li>
-              <a href="/">About Us</a>
+              <Link to="/">About Us</Link>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <Link to="/">Contact</Link>
             </li>
           </MenuList>
         </NavItens>

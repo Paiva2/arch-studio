@@ -7,7 +7,7 @@ import {
   CarouselWrapper,
 } from "./styles"
 import { useKeenSlider, TrackDetails } from "keen-slider/react"
-import CarouselLinkArrow from "../../icons/CarouselLinkArrow"
+import ArrowRight from "../../icons/ArrowRight"
 import { carouselContents } from "./utils/carouselContents"
 import { motion } from "framer-motion"
 
@@ -92,7 +92,7 @@ const HomeCarousel = () => {
                         delay: 0.2,
                       }}
                     >
-                      See Our Portfolio <CarouselLinkArrow />
+                      See Our Portfolio <ArrowRight />
                     </motion.a>
                   </motion.div>
                 </CarouselTextsWrapper>

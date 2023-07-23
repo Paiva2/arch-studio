@@ -1,6 +1,7 @@
-import CarouselLinkArrow from "../../icons/CarouselLinkArrow"
+import ArrowRight from "../../icons/ArrowRight"
 import FadeComponent from "../FadeComponent"
 import { BigIdeasContainer, BigIdeasTextWrapper, BigIdeasWrapper } from "./styles"
+import { Link } from "react-router-dom"
 
 const HomeBigIdeas = () => {
   return (
@@ -11,9 +12,9 @@ const HomeBigIdeas = () => {
           <BigIdeasTextWrapper>
             <div className="motionDiv">
               <h1>Small team, big ideas</h1>
-              <a>
-                About Us <CarouselLinkArrow />
-              </a>
+              <Link to="#">
+                About Us <ArrowRight />
+              </Link>
             </div>
           </BigIdeasTextWrapper>
         </BigIdeasWrapper>

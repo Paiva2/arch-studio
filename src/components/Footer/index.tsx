@@ -1,4 +1,4 @@
-import CarouselLinkArrow from "../../icons/CarouselLinkArrow"
+import ArrowRight from "../../icons/ArrowRight"
 import Logo from "../../icons/Logo"
 import {
   FooterContainer,
@@ -8,6 +8,7 @@ import {
   FooterWrapper,
   SeePortfolio,
 } from "./styles"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -25,9 +26,9 @@ const Footer = () => {
             </FooterNavList>
           </div>
           <SeePortfolio>
-            <a>
-              See Our Portfolio <CarouselLinkArrow />
-            </a>
+            <Link to="#">
+              See Our Portfolio <ArrowRight />
+            </Link>
           </SeePortfolio>
         </FooterContents>
       </FooterWrapper>
