@@ -1,29 +1,20 @@
 import Header from "./components/Header"
+import HomeBigIdeas from "./components/HomeBigIdeas"
 import HomeCarousel from "./components/HomeCarousel"
+import HomeWelcome from "./components/HomeWelcome"
+import { HomeMiddleWrapper, Main } from "./styles"
 
 function App() {
   return (
     <>
       <Header />
-      <main
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          minHeight: "100vh",
-          paddingTop: "30px",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+      <Main>
+        <HomeMiddleWrapper>
           <HomeCarousel />
-        </div>
-      </main>
+          <HomeWelcome />
+          <HomeBigIdeas />
+        </HomeMiddleWrapper>
+      </Main>
     </>
   )
 }

@@ -106,10 +106,15 @@ export const CarouselTextsWrapper = styled.div`
       align-items: center;
       justify-content: space-between;
       font-weight: 700;
-      width: 50%;
-      padding: 1.5625rem 1.25rem;
+      width: 45%;
+      padding: 1.5625rem 20px;
       cursor: pointer;
       gap: 1.25rem;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #535456;
+      }
     }
   }
 `

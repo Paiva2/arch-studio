@@ -37,10 +37,15 @@ export const MenuList = styled.ul`
   li {
     width: calc(100% / 3);
     max-width: 6.25rem;
+    transition: color 0.2s ease;
 
     a {
       width: 100%;
       cursor: pointer;
+    }
+
+    &:hover {
+      color: #535456;
     }
   }
 `

@@ -62,31 +62,34 @@ const HomeCarousel = () => {
                 <CarouselTextsWrapper>
                   <motion.div className="motionDiv" key={titleRef.current}>
                     <motion.h1
-                      initial={{ opacity: 0, y: -150 }}
+                      initial={{ opacity: 0, y: -200 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{
-                        duration: 0.4,
+                        duration: 0.3,
                         ease: "easeIn",
+                        delay: 0.2,
                       }}
                     >
                       {content.title}
                     </motion.h1>
                     <motion.p
-                      initial={{ opacity: 0, x: -150 }}
+                      initial={{ opacity: 0, x: -200 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{
-                        duration: 0.4,
+                        duration: 0.3,
                         ease: "easeIn",
+                        delay: 0.2,
                       }}
                     >
                       {content.description}
                     </motion.p>
                     <motion.a
-                      initial={{ opacity: 0, x: -150 }}
+                      initial={{ opacity: 0, x: -200 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{
-                        duration: 0.4,
+                        duration: 0.1,
                         ease: "easeIn",
+                        delay: 0.2,
                       }}
                     >
                       See Our Portfolio <CarouselLinkArrow />
