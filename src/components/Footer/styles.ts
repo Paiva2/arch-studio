@@ -6,20 +6,17 @@ export const FooterContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 5rem;
-  height: 100%;
 `
 
 export const FooterWrapper = styled.div`
   width: 65%;
   max-width: 75rem;
-  height: 100%;
   position: relative;
 `
 
 export const FooterContents = styled.div`
   display: flex;
   align-items: center;
-  height: 100%;
   width: 90%;
   background-color: #eeeff4;
 `

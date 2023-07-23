@@ -7,6 +7,7 @@ export const Main = styled.main`
   justify-content: center;
   padding-top: 1.875rem;
   width: 100%;
+  min-height: 100vh;
 `
 
 export const HomeMiddleWrapper = styled.div`

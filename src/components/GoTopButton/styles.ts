@@ -2,7 +2,7 @@ import { styled } from "styled-components"
 
 export const GoTopWrapper = styled.div`
   position: fixed;
-  right: 50px;
+  right: 3.125rem;
   bottom: 5%;
   opacity: 0;
   visibility: hidden;
@@ -19,7 +19,7 @@ export const GoTopWrapper = styled.div`
     display: grid;
     place-items: center;
     opacity: 0.8;
-    padding: 10px 10px;
+    padding: 0.625rem 0.625rem;
     cursor: pointer;
     transition: 0.2s ease;
 

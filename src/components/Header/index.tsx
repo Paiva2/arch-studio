@@ -15,12 +15,14 @@ const Header = () => {
     <HeaderContainer>
       <HeaderWrapper>
         <div>
-          <Logo color="#1B1D23" />
+          <Link to="/">
+            <Logo color="#1B1D23" />
+          </Link>
         </div>
         <NavItens>
           <MenuList>
             <li>
-              <Link to="/">Portfolio</Link>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
             <li>
               <Link to="/">About Us</Link>
@@ -30,7 +32,6 @@ const Header = () => {
             </li>
           </MenuList>
         </NavItens>
-
         <TopHomeIndicator>
           <Line />
           <TopHomeIndicatorText>HOME</TopHomeIndicatorText>

@@ -7,6 +7,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: center;
 `
+
 export const HeaderWrapper = styled.div`
   width: 65%;
   display: flex;

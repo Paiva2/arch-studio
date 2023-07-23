@@ -20,13 +20,19 @@ const Footer = () => {
           </FooterLogo>
           <div>
             <FooterNavList>
-              <li>Portfolio</li>
-              <li>About Us</li>
-              <li>Contact</li>
+              <li>
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="#">About Us</Link>
+              </li>
+              <li>
+                <Link to="#">Contact</Link>
+              </li>
             </FooterNavList>
           </div>
           <SeePortfolio>
-            <Link to="#">
+            <Link to="/portfolio">
               See Our Portfolio <ArrowRight />
             </Link>
           </SeePortfolio>

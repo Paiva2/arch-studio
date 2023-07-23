@@ -34,7 +34,7 @@ const HomeFeatured = () => {
                   <ProjectDescriptions>
                     <TextsWrapper>
                       <span>{featured.title}</span>
-                      <Link to="#">View Linkll projects</Link>
+                      <Link to="/portfolio">View Linkll projects</Link>
                     </TextsWrapper>
                     <ProjectNumber>{featured.id}</ProjectNumber>
                   </ProjectDescriptions>
