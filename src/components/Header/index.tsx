@@ -14,7 +14,7 @@ const Header = () => {
     <HeaderContainer>
       <HeaderWrapper>
         <div>
-          <Logo />
+          <Logo color="#1B1D23" />
         </div>
         <NavItens>
           <MenuList>
