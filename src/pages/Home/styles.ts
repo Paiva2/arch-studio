@@ -16,6 +16,5 @@ export const HomeMiddleWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 3.125rem;
   gap: 5rem;
 `

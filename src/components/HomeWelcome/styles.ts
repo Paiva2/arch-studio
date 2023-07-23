@@ -32,7 +32,7 @@ export const WelcomeTextsWrapper = styled.div`
   width: 55%;
 
   h1 {
-    font-size: 50px;
+    font-size: 3.125rem;
     color: #1c1d22;
   }
 

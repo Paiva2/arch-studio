@@ -4,6 +4,7 @@ import Footer from "../../components/Footer"
 import Home from "../Home"
 import GoTopButton from "../../components/GoTopButton"
 import Portfolio from "../Portfolio"
+import AboutUs from "../AboutUs"
 
 const Layout = () => {
   return (
@@ -12,6 +13,7 @@ const Layout = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
       <GoTopButton />
       <Footer />

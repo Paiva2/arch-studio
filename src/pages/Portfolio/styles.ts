@@ -1,21 +1,5 @@
 import { styled } from "styled-components"
 
-export const PortfolioContainer = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding-top: 5rem;
-  min-height: 100vh;
-`
-
-export const PortfoliosWrapper = styled.div`
-  width: 65%;
-  max-width: 75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3.125rem;
-`
-
 export const ProjectCards = styled.div`
   display: flex;
   flex-direction: column;
