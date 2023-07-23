@@ -70,6 +70,11 @@ export const ProjectDescriptions = styled.div`
   flex-direction: column;
   position: relative;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 `
 
 export const TextsWrapper = styled.div`

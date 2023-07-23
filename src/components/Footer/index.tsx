@@ -17,7 +17,6 @@ const Footer = () => {
           <FooterLogo>
             <Logo color="#fff" />
           </FooterLogo>
-
           <div>
             <FooterNavList>
               <li>Portfolio</li>
