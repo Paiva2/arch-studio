@@ -52,11 +52,12 @@ export const MenuList = styled.ul`
 `
 export const TopHomeIndicator = styled.div`
   align-items: center;
-  gap: 5.3125rem;
   display: flex;
   flex-direction: column;
   position: absolute;
   right: 100%;
+  min-height: 18.75rem;
+  justify-content: space-between;
 `
 
 export const Line = styled.div`
@@ -65,10 +66,13 @@ export const Line = styled.div`
   background: #eeeff4;
 `
 
-export const TopHomeIndicatorText = styled.span`
+export const TopHomeIndicatorText = styled.div`
   transform: rotate(90deg);
   color: #eeeff4;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.7rem;
+  display: flex;
+  align-items: center;
+  width: 13.125rem;
 `

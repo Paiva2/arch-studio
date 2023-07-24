@@ -1,10 +1,11 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom"
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
-import Home from "../Home"
-import GoTopButton from "../../components/GoTopButton"
-import Portfolio from "../Portfolio"
-import AboutUs from "../AboutUs"
+import Header from "../components/Header"
+import Home from "../pages/Home"
+import Portfolio from "../pages/Portfolio"
+import AboutUs from "../pages/AboutUs"
+import GoTopButton from "../components/GoTopButton"
+import Footer from "../components/Footer"
+import Contact from "../pages/Contact"
 
 const Layout = () => {
   return (
@@ -14,6 +15,7 @@ const Layout = () => {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <GoTopButton />
       <Footer />
