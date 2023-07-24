@@ -73,6 +73,80 @@ export const MapWrapper = styled.div`
     .leaflet-control-zoom-out {
       margin: 0;
       cursor: pointer;
+      border: 0;
+      border-radius: 0;
+    }
+
+    .leaflet-control-zoom-in {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .leaflet-control-zoom-in:hover,
+    .leaflet-control-zoom-out:hover {
+      background-color: #eeeff4;
+    }
+  }
+`
+
+export const ContactUs = styled.form`
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  gap: 3.75rem;
+  margin-top: 5rem;
+
+  h3 {
+    font-size: 3.125rem;
+    color: #1c1d22;
+  }
+`
+
+export const ContactFields = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 1.25rem;
+
+  input,
+  textarea {
+    all: unset;
+    border-bottom: 1px solid #1c1d22;
+    padding: 20px;
+    font-size: 20px;
+    resize: none;
+
+    &::placeholder {
+      font-weight: 700;
+      color: #eeeff4;
+    }
+  }
+`
+
+export const FormFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  div:last-child {
+    align-self: end;
+  }
+
+  button {
+    all: unset;
+    background-color: #1c1d22;
+    display: grid;
+    place-items: center;
+    color: #fefffd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    padding: 1.875rem;
+    cursor: pointer;
+    gap: 1.25rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #535456;
     }
   }
 `

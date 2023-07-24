@@ -1,12 +1,15 @@
 import PageContainer from "../../components/PageContainer"
 import FadeComponent from "../../components/FadeComponent"
 import { Helmet } from "react-helmet"
-import { Fragment } from "react"
+import { FormEvent, Fragment, useState } from "react"
 import SubPagesBanner from "../../components/SubPagesBanner"
 import ArrowRight from "../../icons/ArrowRight"
 import {
   ContactDetails,
+  ContactFields,
+  ContactUs,
   DetailsTitle,
+  FormFooter,
   Location,
   LocationInformations,
   LocationWrapper,
@@ -16,13 +19,26 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import { Zoom } from "leaflet"
 import marker from "../../../public/custom-marker.png"
 import L from "leaflet"
-
-interface Marker {
-  iconUrl: any
-  iconSize: [number, number]
-}
+import Swal from "sweetalert2"
 
 const Contact = () => {
+  const formDefault = {
+    name: {
+      value: "",
+      error: true,
+    },
+    email: {
+      value: "",
+      error: true,
+    },
+    message: {
+      value: "",
+      error: true,
+    },
+  }
+
+  const [contactFields, setContactFields] = useState(formDefault)
+
   const pageData = {
     imageUrl: "https://i.postimg.cc/bwTXSZck/image-hero.jpg",
     bigText: "Contact",
@@ -35,6 +51,59 @@ const Contact = () => {
     iconUrl: marker,
     iconSize: [30, 35],
   })
+
+  const checkFieldErrors = () => {
+    Object.keys(contactFields).map((field) => {
+      setContactFields((oldValue) => ({
+        ...oldValue,
+        [field]: {
+          value: oldValue[field as keyof typeof oldValue].value,
+          error:
+            oldValue[field as keyof typeof oldValue].value === "" ? true : false,
+        },
+      }))
+    })
+  }
+
+  const handleChangeInputValue = (value: string, field: string) => {
+    setContactFields((oldValue) => ({
+      ...oldValue,
+      [field]: {
+        value,
+        error: oldValue[field as keyof typeof oldValue].error,
+      },
+    }))
+
+    checkFieldErrors()
+  }
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+
+    const { email, name, message } = contactFields
+
+    checkFieldErrors()
+
+    if (email.error || name.error || message.error) {
+      return Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Fill all the fields!",
+        showConfirmButton: false,
+        timer: 1500,
+      })
+    }
+
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Thanks for the contact!",
+      showConfirmButton: false,
+      timer: 1500,
+    })
+
+    setContactFields(formDefault)
+  }
 
   return (
     <Fragment>
@@ -110,6 +179,36 @@ const Contact = () => {
               </Marker>
             </MapContainer>
           </MapWrapper>
+
+          <ContactUs onSubmit={handleSubmit}>
+            <h3>Connect with us</h3>
+            <ContactFields>
+              <input
+                value={contactFields.name.value}
+                onChange={(e) => handleChangeInputValue(e.target.value, "name")}
+                placeholder="Name"
+                type="text"
+              />
+              <input
+                value={contactFields.email.value}
+                onChange={(e) => handleChangeInputValue(e.target.value, "email")}
+                placeholder="Email"
+                type="email"
+              />
+              <FormFooter>
+                <textarea
+                  value={contactFields.message.value}
+                  onChange={(e) => handleChangeInputValue(e.target.value, "message")}
+                  placeholder="Message"
+                />
+                <div>
+                  <button type="submit">
+                    <ArrowRight />
+                  </button>
+                </div>
+              </FormFooter>
+            </ContactFields>
+          </ContactUs>
         </PageContainer>
       </FadeComponent>
     </Fragment>

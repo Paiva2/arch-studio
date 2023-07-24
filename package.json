@@ -25,7 +25,9 @@
     "react-helmet": "^6.1.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.14.2",
-    "styled-components": "^6.0.5"
+    "styled-components": "^6.0.5",
+    "sweetalert2": "^11.7.20",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.3",
