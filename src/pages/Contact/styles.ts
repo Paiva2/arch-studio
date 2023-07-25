@@ -8,7 +8,7 @@ export const ContactDetails = styled.div`
   gap: 1.25rem;
   margin-top: 5rem;
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     align-items: initial;
   }
 
@@ -37,7 +37,7 @@ export const LocationWrapper = styled.div`
   justify-content: space-between;
   gap: 1.25rem;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     flex-direction: column;
     gap: 3.125rem;
   }

@@ -38,6 +38,7 @@ export const portfolioItems = [
     id: "6",
     title: "228B Tower",
     year: "April 2015",
+    image: "https://i.postimg.cc/zfmJNNfL/image-228b.jpg",
     mobileImage: "https://i.postimg.cc/7ZZqzMQn/image-228b-mob.jpg",
   },
   {

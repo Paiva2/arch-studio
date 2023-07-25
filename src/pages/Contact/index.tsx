@@ -1,7 +1,7 @@
 import PageContainer from "../../components/PageContainer"
 import FadeComponent from "../../components/FadeComponent"
 import { Helmet } from "react-helmet"
-import { FormEvent, Fragment, useEffect, useState } from "react"
+import { FormEvent, Fragment, useState } from "react"
 import SubPagesBanner from "../../components/SubPagesBanner"
 import ArrowRight from "../../icons/ArrowRight"
 import {

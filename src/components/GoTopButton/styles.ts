@@ -28,7 +28,7 @@ export const GoTopWrapper = styled.div`
     }
   }
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     bottom: 18%;
     right: 1.125rem;
     z-index: 100;

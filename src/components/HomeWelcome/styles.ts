@@ -16,7 +16,7 @@ export const WelcomeWrapper = styled.div`
   gap: 1.25rem;
   position: relative;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     width: 80%;
 
     img {
@@ -45,7 +45,7 @@ export const WelcomeTextsWrapper = styled.div`
   flex-direction: column;
   gap: 0.9375rem;
   align-items: center;
-  width: 55%;
+  width: 70%;
 
   h1 {
     font-size: 3.125rem;
@@ -58,7 +58,7 @@ export const WelcomeTextsWrapper = styled.div`
     line-height: 1.5rem;
   }
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     width: 100%;
   }
 
@@ -76,11 +76,17 @@ export const WelcomeText = styled.h1`
   font-size: 12.5rem;
   color: #eeeff4;
   font-weight: 700;
-  top: -100px;
+  top: -125px;
   left: 5%;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 85.9375rem) {
+    font-size: 8.375rem;
+  }
+
+  @media (max-width: 60rem) {
     font-size: 5.625rem;
+    left: 45%;
+    transform: translate(-45%, 0);
   }
 
   @media (max-width: 768px) {

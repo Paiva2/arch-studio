@@ -45,11 +45,13 @@ const HomeFeatured = () => {
                 </ProjectCards>
               )
             })}
-            <SeAllButton>
-              <Link to="/portfolio">
-                See all <ArrowRight />
-              </Link>
-            </SeAllButton>
+            {isMobile && (
+              <SeAllButton>
+                <Link to="/portfolio">
+                  See all <ArrowRight />
+                </Link>
+              </SeAllButton>
+            )}
           </PortfolioWrapper>
         </FeaturedsWrapper>
       </FeaturedContainer>

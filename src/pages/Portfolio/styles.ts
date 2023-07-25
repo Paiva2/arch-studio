@@ -56,11 +56,11 @@ export const TextsWrapper = styled.div`
 
 export const PortfolioWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 23.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
   gap: 1.875rem;
   justify-content: space-between;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     grid-template-columns: repeat(auto-fit, 18.125rem);
     justify-content: center;
   }

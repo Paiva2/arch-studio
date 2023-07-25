@@ -27,10 +27,11 @@ export const ImageOpacity = styled.div`
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
     left: 0;
-    height: 98%;
+    height: 100%;
     max-width: 39.6875rem;
     width: 100%;
     z-index: 1000;
+    max-height: 45rem;
   }
 
   @media (max-width: 768px) {
@@ -51,8 +52,9 @@ export const SubPagesTexts = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: end;
+  z-index: 1000;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     width: 90%;
     height: 65%;
   }
@@ -120,7 +122,15 @@ export const SubPagesBigText = styled.h1`
   top: -80px;
   right: 20px;
 
-  @media (max-width: 940px) {
+  @media (max-width: 79.25rem) {
+    font-size: 9.375rem;
+  }
+
+  @media (max-width: 71.875rem) {
+    top: -120px;
+  }
+
+  @media (max-width: 60.5rem) {
     font-size: 7.5rem;
   }
 

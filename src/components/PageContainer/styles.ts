@@ -16,7 +16,7 @@ export const PagesWrapper = styled.div`
   flex-direction: column;
   gap: 3.125rem;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     width: 80%;
   }
 

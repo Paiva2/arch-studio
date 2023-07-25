@@ -28,7 +28,7 @@ export const HeritageTexts = styled.div`
     color: #535456;
   }
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     width: 60%;
   }
 
@@ -45,8 +45,8 @@ export const HeritageTexts = styled.div`
 
 export const HeritageImage = styled.div`
   min-height: 35rem;
-  min-width: 33.75rem;
   position: relative;
+  width: 100%;
 
   img {
     object-fit: cover;
@@ -54,7 +54,7 @@ export const HeritageImage = styled.div`
     height: 100%;
   }
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     min-width: initial;
     width: 40%;
   }
@@ -79,7 +79,7 @@ export const Leaders = styled.div`
   gap: 1.875rem;
   margin-top: 6rem;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     flex-direction: column;
   }
 
@@ -114,7 +114,7 @@ export const LeaderCardsWrapper = styled.div`
   width: 100%;
   justify-content: end;
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     grid-template-columns: repeat(auto-fit, 295px);
     justify-content: center;
   }
@@ -158,7 +158,7 @@ export const LeaderSocialMediaContainer = styled.div`
     opacity: 1;
   }
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     display: none;
   }
 `
@@ -182,7 +182,7 @@ export const SocialMediasMobile = styled.div`
     fill: black;
   }
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     display: flex;
   }
 `

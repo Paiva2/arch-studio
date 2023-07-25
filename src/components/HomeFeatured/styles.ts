@@ -15,7 +15,7 @@ export const FeaturedsWrapper = styled.div`
   flex-direction: column;
   gap: 3.125rem;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     width: 80%;
   }
 `
@@ -90,7 +90,7 @@ export const ProjectCards = styled.div`
     position: absolute;
   }
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 60rem) {
     height: 15.625rem;
 
     img {
@@ -139,11 +139,15 @@ export const TextsWrapper = styled.div`
 
 export const PortfolioWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 21.875rem);
+  grid-template-columns: repeat(auto-fit, 17.875rem);
   justify-content: space-between;
   gap: 1.25rem;
 
-  @media (max-width: 58.75rem) {
+  @media (max-width: 86.25rem) {
+    grid-template-columns: repeat(auto-fit, 14.875rem);
+  }
+
+  @media (max-width: 60rem) {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 18.4375rem);
   }

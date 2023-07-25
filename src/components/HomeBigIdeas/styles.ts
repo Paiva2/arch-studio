@@ -63,7 +63,7 @@ export const BigIdeasWrapper = styled.div`
       }
     }
 
-    @media (max-width: 58.75rem) {
+    @media (max-width: 60rem) {
       justify-content: center;
       width: 85%;
       max-width: none;
@@ -79,7 +79,7 @@ export const BigIdeasWrapper = styled.div`
     }
   }
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     width: 80%;
   }
 
@@ -99,7 +99,7 @@ export const BigIdeasTextWrapper = styled.div`
   height: 100%;
   z-index: 100;
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     justify-content: center;
     height: auto;
     padding-left: 0.625rem;

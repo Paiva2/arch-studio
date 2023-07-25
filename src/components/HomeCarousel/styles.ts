@@ -32,7 +32,7 @@ export const CarouselWrapper = styled.section`
     }
   }
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     width: 80%;
   }
 
@@ -76,7 +76,7 @@ export const CarouselPages = styled.div`
     }
   }
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     left: 0;
   }
 
@@ -105,7 +105,7 @@ export const CarouselTextsWrapper = styled.div`
   height: 100%;
   padding: 10.75rem 1.25rem 0px 10.75rem;
 
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     height: auto;
     padding: 0;
     display: flex;
@@ -148,7 +148,7 @@ export const CarouselTextsWrapper = styled.div`
       }
     }
 
-    @media (max-width: 58.75rem) {
+    @media (max-width: 60rem) {
       width: 90%;
       justify-content: center;
 
