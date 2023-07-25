@@ -5,16 +5,19 @@ import {
   HeaderWrapper,
   Line,
   MenuList,
+  MobileMenuTrigger,
   NavItens,
   TopHomeIndicator,
   TopHomeIndicatorText,
 } from "./styles"
 import { Link, useLocation } from "react-router-dom"
 import MenuHamburguer from "../../icons/MenuHamburguer"
+import CloseMenuIcon from "../../icons/CloseMenuIcon"
 
 const Header = () => {
   const pathname = useLocation()
   const [path, setPath] = useState("HOME")
+  const [openMobileMenu, setOpenMobileMenu] = useState(false)
 
   useEffect(() => {
     if (pathname.pathname.includes("contact")) {
@@ -28,24 +31,33 @@ const Header = () => {
     }
   }, [pathname])
 
+  const closeMenuOnChangePage = () => {
+    setOpenMobileMenu(false)
+  }
+
   return (
     <HeaderContainer>
       <HeaderWrapper>
-        <div>
+        <div onClick={closeMenuOnChangePage}>
           <Link to="/">
             <Logo color="#1B1D23" />
           </Link>
         </div>
-        <MenuHamburguer />
-        <NavItens>
+        <MobileMenuTrigger
+          onClick={() => setOpenMobileMenu(!openMobileMenu)}
+          type="button"
+        >
+          {!openMobileMenu ? <MenuHamburguer /> : <CloseMenuIcon />}
+        </MobileMenuTrigger>
+        <NavItens showMenu={openMobileMenu}>
           <MenuList>
-            <li>
+            <li onClick={closeMenuOnChangePage}>
               <Link to="/portfolio">Portfolio</Link>
             </li>
-            <li>
+            <li onClick={closeMenuOnChangePage}>
               <Link to="/about">About Us</Link>
             </li>
-            <li>
+            <li onClick={closeMenuOnChangePage}>
               <Link to="/contact">Contact</Link>
             </li>
           </MenuList>

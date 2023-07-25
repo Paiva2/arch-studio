@@ -1,4 +1,4 @@
-import { styled } from "styled-components"
+import { keyframes, styled } from "styled-components"
 
 export const HeaderContainer = styled.div`
   padding-top: 3.125rem;
@@ -6,6 +6,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   @media (min-width: 960px) {
     .menu-hamburguer {
@@ -14,9 +15,7 @@ export const HeaderContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-    padding-top: 1.25rem;
+    padding-top: 1.125rem;
   }
 `
 
@@ -26,7 +25,6 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   gap: 4.375rem;
   max-width: 75rem;
-  position: relative;
 
   div:first-child {
     svg {
@@ -41,16 +39,36 @@ export const HeaderWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
   }
 `
+interface ShowMobileMenu {
+  showMenu: boolean
+}
 
-export const NavItens = styled.nav`
+export const NavItens = styled.nav<ShowMobileMenu>`
   width: 100%;
-  display: none;
+  display: flex;
 
-  @media (min-width: 960px) {
-    display: flex;
+  @media (max-width: 60rem), (max-width: 48rem) {
+    visibility: ${({ showMenu }) => (showMenu ? "visible" : "hidden")};
+    opacity: ${({ showMenu }) => (showMenu ? "1" : "0")};
+    position: absolute;
+    background-color: #fff;
+    z-index: 1500;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transition: all 0.2s ease-in-out;
+
+    ul {
+      align-items: center;
+      padding-top: 3.125rem;
+      padding-bottom: 3.125rem;
+      justify-content: center;
+      height: 100%;
+    }
   }
 `
 export const MenuList = styled.ul`
@@ -77,10 +95,19 @@ export const MenuList = styled.ul`
     }
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 60rem) {
     gap: 1.125rem;
   }
+
+  @media (max-width: 48rem) {
+    flex-direction: column;
+  }
 `
+
+export const MobileMenuTrigger = styled.button`
+  all: unset;
+`
+
 export const TopHomeIndicator = styled.div`
   align-items: center;
   display: flex;
