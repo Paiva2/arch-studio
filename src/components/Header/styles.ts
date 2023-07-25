@@ -1,4 +1,4 @@
-import { keyframes, styled } from "styled-components"
+import { styled } from "styled-components"
 
 export const HeaderContainer = styled.div`
   padding-top: 3.125rem;
