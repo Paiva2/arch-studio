@@ -5,6 +5,10 @@ export const HeritageContainer = styled.div`
   justify-content: space-between;
   gap: 2.5rem;
   margin-top: 6rem;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `
 
 export const HeritageTexts = styled.div`
@@ -27,6 +31,16 @@ export const HeritageTexts = styled.div`
   @media (max-width: 58.75rem) {
     width: 60%;
   }
+
+  @media (max-width: 48rem) {
+    justify-content: center;
+    width: 100%;
+    padding: 25px;
+
+    h1 {
+      font-size: 1.875rem;
+    }
+  }
 `
 
 export const HeritageImage = styled.div`
@@ -43,6 +57,10 @@ export const HeritageImage = styled.div`
   @media (max-width: 58.75rem) {
     min-width: initial;
     width: 40%;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `
 
@@ -61,8 +79,12 @@ export const Leaders = styled.div`
   gap: 1.875rem;
   margin-top: 6rem;
 
-  @media (max-width: 940px) {
+  @media (max-width: 58.75rem) {
     flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
   }
 `
 
@@ -72,6 +94,16 @@ export const LeadersTitle = styled.div`
   h1 {
     color: #1c1d22;
     font-size: 3.125rem;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 1.875rem;
+    }
   }
 `
 
@@ -135,7 +167,7 @@ export const LeaderTexts = styled.div`
   color: #1c1d22;
 
   h3 {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     font-size: 1rem;
     font-weight: 700;
   }

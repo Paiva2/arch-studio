@@ -11,11 +11,23 @@ export const ContactDetails = styled.div`
   @media (max-width: 940px) {
     align-items: initial;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
 `
 
 export const DetailsTitle = styled.h1`
   font-size: 3.125rem;
   color: #1c1d22;
+
+  @media (max-width: 48rem) {
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+  }
 `
 
 export const LocationWrapper = styled.div`
@@ -25,7 +37,7 @@ export const LocationWrapper = styled.div`
   justify-content: space-between;
   gap: 1.25rem;
 
-  @media (max-width: 940px) {
+  @media (max-width: 58.75rem) {
     flex-direction: column;
     gap: 3.125rem;
   }
@@ -94,6 +106,16 @@ export const MapWrapper = styled.div`
     .leaflet-control-zoom-out:hover {
       background-color: #eeeff4;
     }
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 `
 
@@ -107,6 +129,17 @@ export const ContactUs = styled.form`
   h3 {
     font-size: 3.125rem;
     color: #1c1d22;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: 1.875rem;
+    }
   }
 `
 

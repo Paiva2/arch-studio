@@ -23,10 +23,14 @@ import { Fragment } from "react"
 import SubPagesBanner from "../../components/SubPagesBanner"
 import LinkedinBlack from "../../icons/LinkedinBlack"
 import TwitterBlack from "../../icons/TwitterBlack"
+import { useIsMobile } from "../../hooks/useMobile"
 
 const AboutUs = () => {
+  const isMobile = useIsMobile()
+
   const pageData = {
     imageUrl: "https://i.postimg.cc/VvxQ1CGj/image-hero-about-us.jpg",
+    mobileImage: "https://i.postimg.cc/J0dPjYXX/about-mob.jpg",
     bigText: "About",
     title: "Your team of professionals",
     description:
@@ -41,7 +45,7 @@ const AboutUs = () => {
       <FadeComponent>
         <PageContainer>
           <SubPagesBanner
-            imageUrl={pageData.imageUrl}
+            imageUrl={isMobile ? pageData.mobileImage : pageData.imageUrl}
             bigText={pageData.bigText}
             title={pageData.title}
             description={pageData.description}

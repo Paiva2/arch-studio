@@ -18,8 +18,10 @@ const SubPagesBanner = ({ imageUrl, bigText, title, description }: Props) => {
   return (
     <Fragment>
       <SubPagesContainer>
-        <ImageOpacity />
-        <img src={imageUrl} />
+        <ImageOpacity>
+          <div />
+          <img src={imageUrl} />
+        </ImageOpacity>
         <SubPagesTexts>
           <TextsWrapper>
             <SubPagesBigText>{bigText}</SubPagesBigText>
