@@ -52,7 +52,12 @@ export const TextsWrapper = styled.div`
 
 export const PortfolioWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 380px);
+  grid-template-columns: repeat(auto-fit, 23.75rem);
   gap: 1.875rem;
   justify-content: space-between;
+
+  @media (max-width: 940px) {
+    grid-template-columns: repeat(auto-fit, 290px);
+    justify-content: center;
+  }
 `

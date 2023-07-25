@@ -23,13 +23,18 @@ export const SubPagesTexts = styled.div`
   position: absolute;
   width: 60%;
   height: 70%;
-  bottom: 0;
-  right: 0;
+  bottom: -1px;
+  right: -1px;
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
+
+  @media (max-width: 940px) {
+    width: 90%;
+    height: 65%;
+  }
 `
 
 export const TextsWrapper = styled.div`
@@ -66,4 +71,8 @@ export const SubPagesBigText = styled.h1`
   font-weight: 700;
   top: -80px;
   right: 20px;
+
+  @media (max-width: 940px) {
+    font-size: 7.5rem;
+  }
 `

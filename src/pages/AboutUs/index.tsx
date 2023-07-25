@@ -14,12 +14,15 @@ import {
   LeaderTexts,
   Leaders,
   LeadersTitle,
+  SocialMediasMobile,
 } from "./styles"
 import { leadersInformations } from "./utils/leaderInformations"
 import FadeComponent from "../../components/FadeComponent"
 import { Helmet } from "react-helmet"
 import { Fragment } from "react"
 import SubPagesBanner from "../../components/SubPagesBanner"
+import LinkedinBlack from "../../icons/LinkedinBlack"
+import TwitterBlack from "../../icons/TwitterBlack"
 
 const AboutUs = () => {
   const pageData = {
@@ -98,6 +101,18 @@ const AboutUs = () => {
                       <h3>{leader.name}</h3>
                       <p>{leader.role}</p>
                     </LeaderTexts>
+                    <SocialMediasMobile>
+                      <span>
+                        <Link to="https://linkedin.com">
+                          <LinkedinBlack />
+                        </Link>
+                      </span>
+                      <span>
+                        <Link to="https://twitter.com">
+                          <TwitterBlack />
+                        </Link>
+                      </span>
+                    </SocialMediasMobile>
                   </LeaderCard>
                 )
               })}

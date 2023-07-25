@@ -7,6 +7,10 @@ export const ContactDetails = styled.div`
   justify-content: space-between;
   gap: 1.25rem;
   margin-top: 5rem;
+
+  @media (max-width: 940px) {
+    align-items: initial;
+  }
 `
 
 export const DetailsTitle = styled.h1`
@@ -20,6 +24,11 @@ export const LocationWrapper = styled.div`
   width: 80%;
   justify-content: space-between;
   gap: 1.25rem;
+
+  @media (max-width: 940px) {
+    flex-direction: column;
+    gap: 3.125rem;
+  }
 `
 
 export const Location = styled.div`
