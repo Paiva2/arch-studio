@@ -18,10 +18,6 @@ export const FeaturedsWrapper = styled.div`
   @media (max-width: 58.75rem) {
     width: 80%;
   }
-
-  @media (max-width: 58.75rem) {
-    width: 100%;
-  }
 `
 
 export const FeaturedHeader = styled.div`

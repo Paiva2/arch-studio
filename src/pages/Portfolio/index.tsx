@@ -9,8 +9,11 @@ import {
 } from "./styles"
 import { portfolioItems } from "./utils/portfolioItems"
 import { Helmet } from "react-helmet"
+import { useIsMobile } from "../../hooks/useMobile"
 
 const Portfolio = () => {
+  const isMobile = useIsMobile()
+
   return (
     <Fragment>
       <Helmet>
@@ -22,7 +25,7 @@ const Portfolio = () => {
             {portfolioItems.map((portfolio) => {
               return (
                 <ProjectCards key={portfolio.id}>
-                  <img src={portfolio.image} />
+                  <img src={isMobile ? portfolio.mobileImage : portfolio.image} />
                   <ProjectDescriptions>
                     <TextsWrapper>
                       <span>{portfolio.title}</span>

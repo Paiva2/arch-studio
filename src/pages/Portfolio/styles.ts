@@ -12,6 +12,10 @@ export const ProjectCards = styled.div`
     object-fit: cover;
     position: absolute;
   }
+
+  @media (max-width: 48rem) {
+    height: 15.625rem;
+  }
 `
 
 export const ProjectDescriptions = styled.div`
@@ -56,8 +60,12 @@ export const PortfolioWrapper = styled.div`
   gap: 1.875rem;
   justify-content: space-between;
 
-  @media (max-width: 940px) {
-    grid-template-columns: repeat(auto-fit, 290px);
+  @media (max-width: 58.75rem) {
+    grid-template-columns: repeat(auto-fit, 18.125rem);
     justify-content: center;
+  }
+
+  @media (max-width: 48rem) {
+    grid-template-columns: repeat(auto-fit, 90%);
   }
 `

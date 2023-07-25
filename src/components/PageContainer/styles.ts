@@ -16,7 +16,11 @@ export const PagesWrapper = styled.div`
   flex-direction: column;
   gap: 3.125rem;
 
-  @media (max-width: 940px) {
+  @media (max-width: 58.75rem) {
     width: 80%;
+  }
+
+  @media (max-width: 48rem) {
+    width: 100%;
   }
 `
