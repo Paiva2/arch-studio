@@ -6,6 +6,17 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 940px) {
+    .menu-hamburguer {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 `
 
 export const HeaderWrapper = styled.div`
@@ -25,11 +36,21 @@ export const HeaderWrapper = styled.div`
   @media (max-width: 58.75rem) {
     width: 80%;
     gap: 2.375rem;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `
 
 export const NavItens = styled.nav`
   width: 100%;
+  display: none;
+
+  @media (min-width: 940px) {
+    display: flex;
+  }
 `
 export const MenuList = styled.ul`
   font-weight: bold;
@@ -70,6 +91,10 @@ export const TopHomeIndicator = styled.div`
 
   @media (max-width: 940px) {
     right: 90%;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `
 

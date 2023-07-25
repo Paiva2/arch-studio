@@ -18,6 +18,10 @@ export const FeaturedsWrapper = styled.div`
   @media (max-width: 58.75rem) {
     width: 80%;
   }
+
+  @media (max-width: 58.75rem) {
+    width: 100%;
+  }
 `
 
 export const FeaturedHeader = styled.div`
@@ -48,6 +52,18 @@ export const FeaturedHeader = styled.div`
       background-color: #535456;
     }
   }
+
+  @media (max-width: 48rem) {
+    justify-content: center;
+
+    span {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+    }
+  }
 `
 
 export const ProjectCards = styled.div`
@@ -60,11 +76,13 @@ export const ProjectCards = styled.div`
     width: 100%;
     max-width: 21.875rem;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
   }
 
   @media (max-width: 58.75rem) {
+    height: 15.625rem;
+
     img {
       object-fit: cover;
       max-width: none;
@@ -128,4 +146,8 @@ export const ProjectNumber = styled.div`
   font-size: 10.625rem;
   font-weight: bold;
   opacity: 0.4;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `

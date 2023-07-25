@@ -1,3 +1,4 @@
+import { useIsMobile } from "../../hooks/useMobile"
 import ArrowRight from "../../icons/ArrowRight"
 import FadeComponent from "../FadeComponent"
 import {
@@ -14,6 +15,8 @@ import { featuredItems } from "./utils/featuredItems"
 import { Link } from "react-router-dom"
 
 const HomeFeatured = () => {
+  const checkResolution = useIsMobile()
+
   return (
     <FadeComponent>
       <FeaturedContainer>
@@ -30,7 +33,9 @@ const HomeFeatured = () => {
             {featuredItems.map((featured) => {
               return (
                 <ProjectCards key={featured.id}>
-                  <img src={featured.image} />
+                  <img
+                    src={checkResolution ? featured.mobileImage : featured.image}
+                  />
                   <ProjectDescriptions>
                     <TextsWrapper>
                       <span>{featured.title}</span>

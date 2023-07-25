@@ -23,6 +23,14 @@ export const WelcomeWrapper = styled.div`
       width: 40%;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    img {
+      display: none;
+    }
+  }
 `
 
 export const WelcomeTexts = styled.div`
@@ -53,6 +61,14 @@ export const WelcomeTextsWrapper = styled.div`
   @media (max-width: 940px) {
     width: 100%;
   }
+
+  @media (max-width: 48rem) {
+    padding: 0px 2rem;
+
+    h1 {
+      font-size: 1.875rem;
+    }
+  }
 `
 
 export const WelcomeText = styled.h1`
@@ -65,5 +81,9 @@ export const WelcomeText = styled.h1`
 
   @media (max-width: 58.75rem) {
     font-size: 5.625rem;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `

@@ -23,11 +23,26 @@ export const FooterContents = styled.div`
   align-items: center;
   width: 90%;
   background-color: #eeeff4;
+
+  @media (max-width: 48rem) {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    gap: 1.5rem;
+    padding: 4.125rem;
+  }
 `
 
 export const FooterLogo = styled.div`
   padding: 4.6875rem 3.125rem;
   background-color: #1b1d23;
+
+  @media (max-width: 48rem) {
+    position: absolute;
+    padding: 0px;
+    top: -55px;
+    padding: 1.5625rem 1.25rem;
+  }
 `
 
 export const FooterNavList = styled.ul`
@@ -46,6 +61,12 @@ export const FooterNavList = styled.ul`
 
   @media (max-width: 940px) {
     gap: 1.125rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    flex-direction: column;
+    gap: 1.875rem;
   }
 `
 
@@ -68,6 +89,14 @@ export const SeePortfolio = styled.span`
 
     &:hover {
       background-color: #535456;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    position: initial;
+
+    a {
+      padding: 1.5625rem 1.25rem;
     }
   }
 `

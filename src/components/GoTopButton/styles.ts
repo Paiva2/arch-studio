@@ -33,4 +33,8 @@ export const GoTopWrapper = styled.div`
     right: 1.125rem;
     z-index: 100;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `

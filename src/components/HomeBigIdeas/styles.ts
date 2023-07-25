@@ -72,11 +72,23 @@ export const BigIdeasWrapper = styled.div`
       h1 {
         font-size: 3.125rem;
       }
+
+      a {
+        width: 55%;
+      }
     }
   }
 
   @media (max-width: 940px) {
     width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    h1 {
+      font-size: 1.875rem !important;
+    }
   }
 `
 

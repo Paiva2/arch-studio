@@ -10,6 +10,7 @@ import {
   TopHomeIndicatorText,
 } from "./styles"
 import { Link, useLocation } from "react-router-dom"
+import MenuHamburguer from "../../icons/MenuHamburguer"
 
 const Header = () => {
   const pathname = useLocation()
@@ -35,6 +36,7 @@ const Header = () => {
             <Logo color="#1B1D23" />
           </Link>
         </div>
+        <MenuHamburguer />
         <NavItens>
           <MenuList>
             <li>

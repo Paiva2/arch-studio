@@ -35,6 +35,10 @@ export const CarouselWrapper = styled.section`
   @media (max-width: 940px) {
     width: 80%;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 export const CarouselContent = styled.div`
   display: flex;
@@ -55,7 +59,7 @@ export const CarouselPages = styled.div`
     font-size: 1rem;
     font-weight: 700;
     color: #535456;
-    padding: 35px;
+    padding: 2.1875rem;
     background-color: #fefffd;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -72,6 +76,11 @@ export const CarouselPages = styled.div`
 
   @media (max-width: 940px) {
     left: 0;
+  }
+
+  @media (max-width: 768px) {
+    position: initial;
+    justify-content: space-between;
   }
 `
 
@@ -142,6 +151,12 @@ export const CarouselTextsWrapper = styled.div`
 
       h1 {
         font-size: 2.25rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      a {
+        width: 70%;
       }
     }
   }
