@@ -10,6 +10,9 @@ import { useKeenSlider, TrackDetails } from "keen-slider/react"
 import ArrowRight from "../../icons/ArrowRight"
 import { carouselContents } from "./utils/carouselContents"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+
+const MotionLink = motion(Link)
 
 const HomeCarousel = () => {
   const [details, setDetails] = useState<TrackDetails | null>(null)
@@ -83,18 +86,18 @@ const HomeCarousel = () => {
                     >
                       {content.description}
                     </motion.p>
-                    <motion.a
-                      href="/portfolio"
+                    <MotionLink
+                      to="/portfolio"
                       initial={{ opacity: 0, x: -200 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{
-                        duration: 0.1,
+                        duration: 0.3,
                         ease: "easeIn",
-                        delay: 0.2,
+                        delay: 0,
                       }}
                     >
                       See Our Portfolio <ArrowRight />
-                    </motion.a>
+                    </MotionLink>
                   </motion.div>
                 </CarouselTextsWrapper>
               </CarouselTextsContainer>
