@@ -14,6 +14,7 @@ import {
   LocationInformations,
   LocationWrapper,
   MapWrapper,
+  ViewOnMapButton,
 } from "./styles"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import { Zoom } from "leaflet"
@@ -106,6 +107,16 @@ const Contact = () => {
     setContactFields(formDefault)
   }
 
+  const scrollToMap = () => {
+    const mapElement = document.querySelector(".map-container")
+
+    mapElement?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    })
+  }
+
   return (
     <Fragment>
       <Helmet>
@@ -136,9 +147,9 @@ const Contact = () => {
                     Phone: <span>123-456-3451</span>
                   </p>
                 </LocationInformations>
-                <button>
+                <ViewOnMapButton type="button" onClick={scrollToMap}>
                   View on map <ArrowRight color="#1c1d22" />
-                </button>
+                </ViewOnMapButton>
               </Location>
 
               <Location>
@@ -154,9 +165,9 @@ const Contact = () => {
                     Phone: <span>832-123-4321</span>
                   </p>
                 </LocationInformations>
-                <button>
+                <ViewOnMapButton onClick={scrollToMap} type="button">
                   View on map <ArrowRight color="#1c1d22" />
-                </button>
+                </ViewOnMapButton>
               </Location>
             </LocationWrapper>
           </ContactDetails>

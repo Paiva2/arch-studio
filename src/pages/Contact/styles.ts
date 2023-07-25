@@ -54,15 +54,6 @@ export const Location = styled.div`
     font-size: 1rem;
   }
 
-  button {
-    all: unset;
-    color: #1c1d22;
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    font-weight: bold;
-  }
-
   p {
     width: 100%;
     display: flex;
@@ -200,4 +191,14 @@ export const FormFooter = styled.div`
       background-color: #535456;
     }
   }
+`
+
+export const ViewOnMapButton = styled.button`
+  all: unset;
+  cursor: pointer;
+  color: #1c1d22;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-weight: bold;
 `
