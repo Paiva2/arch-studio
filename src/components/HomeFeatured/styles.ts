@@ -35,6 +35,22 @@ export const FeaturedHeader = styled.div`
     color: #1c1d22;
   }
 
+  @media (max-width: 48rem) {
+    justify-content: center;
+
+    span {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+    }
+  }
+`
+
+export const SeAllButton = styled.span`
+  margin-bottom: 5rem;
+
   a {
     all: unset;
     background-color: #1c1d22;
@@ -53,15 +69,13 @@ export const FeaturedHeader = styled.div`
     }
   }
 
-  @media (max-width: 48rem) {
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
     justify-content: center;
 
-    span {
-      display: none;
-    }
-
-    h1 {
-      font-size: 1.875rem;
+    a {
+      width: 40%;
     }
   }
 `
@@ -136,6 +150,10 @@ export const PortfolioWrapper = styled.div`
   @media (max-width: 58.75rem) {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 18.4375rem);
+  }
+
+  @media (max-width: 48rem) {
+    grid-template-columns: repeat(auto-fit, 90%);
   }
 `
 

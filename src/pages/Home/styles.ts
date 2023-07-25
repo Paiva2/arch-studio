@@ -8,6 +8,10 @@ export const Main = styled.main`
   padding-top: 1.875rem;
   width: 100%;
   min-height: 100vh;
+
+  @media (max-width: 768px) {
+    padding-top: 1.25rem;
+  }
 `
 
 export const HomeMiddleWrapper = styled.div`

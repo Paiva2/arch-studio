@@ -9,6 +9,7 @@ import {
   ProjectCards,
   ProjectDescriptions,
   ProjectNumber,
+  SeAllButton,
   TextsWrapper,
 } from "./styles"
 import { featuredItems } from "./utils/featuredItems"
@@ -23,11 +24,11 @@ const HomeFeatured = () => {
         <FeaturedsWrapper>
           <FeaturedHeader>
             <h1>Featured</h1>
-            <span>
-              <Link to="#">
+            <SeAllButton>
+              <Link to="/portfolio">
                 See all <ArrowRight />
               </Link>
-            </span>
+            </SeAllButton>
           </FeaturedHeader>
           <PortfolioWrapper>
             {featuredItems.map((featured) => {
@@ -39,13 +40,18 @@ const HomeFeatured = () => {
                   <ProjectDescriptions>
                     <TextsWrapper>
                       <span>{featured.title}</span>
-                      <Link to="/portfolio">View Linkll projects</Link>
+                      <Link to="/portfolio">View all projects</Link>
                     </TextsWrapper>
                     <ProjectNumber>{featured.id}</ProjectNumber>
                   </ProjectDescriptions>
                 </ProjectCards>
               )
             })}
+            <SeAllButton>
+              <Link to="/portfolio">
+                See all <ArrowRight />
+              </Link>
+            </SeAllButton>
           </PortfolioWrapper>
         </FeaturedsWrapper>
       </FeaturedContainer>

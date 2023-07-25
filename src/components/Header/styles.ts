@@ -14,8 +14,9 @@ export const HeaderContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    padding-top: 1.25rem;
   }
 `
 

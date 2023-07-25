@@ -63,6 +63,8 @@ export const CarouselPages = styled.div`
     background-color: #fefffd;
     cursor: pointer;
     transition: background-color 0.2s;
+    display: grid;
+    place-items: center;
 
     &:hover {
       background-color: #eeeff4;
@@ -81,6 +83,11 @@ export const CarouselPages = styled.div`
   @media (max-width: 768px) {
     position: initial;
     justify-content: space-between;
+
+    button {
+      padding: 1.875rem 0px;
+      width: calc(100% / 4);
+    }
   }
 `
 

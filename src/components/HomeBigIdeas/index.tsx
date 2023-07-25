@@ -12,7 +12,7 @@ const HomeBigIdeas = () => {
           <BigIdeasTextWrapper>
             <div className="motionDiv">
               <h1>Small team, big ideas</h1>
-              <Link to="#">
+              <Link to="/about">
                 About Us <ArrowRight />
               </Link>
             </div>
