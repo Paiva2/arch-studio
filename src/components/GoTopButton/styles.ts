@@ -27,4 +27,10 @@ export const GoTopWrapper = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: 58.75rem) {
+    bottom: 18%;
+    right: 1.125rem;
+    z-index: 100;
+  }
 `

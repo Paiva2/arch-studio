@@ -15,6 +15,14 @@ export const WelcomeWrapper = styled.div`
   justify-content: space-between;
   gap: 1.25rem;
   position: relative;
+
+  @media (max-width: 58.75rem) {
+    width: 80%;
+
+    img {
+      width: 40%;
+    }
+  }
 `
 
 export const WelcomeTexts = styled.div`
@@ -41,6 +49,10 @@ export const WelcomeTextsWrapper = styled.div`
     color: #535456;
     line-height: 1.5rem;
   }
+
+  @media (max-width: 940px) {
+    width: 100%;
+  }
 `
 
 export const WelcomeText = styled.h1`
@@ -50,4 +62,8 @@ export const WelcomeText = styled.h1`
   font-weight: 700;
   top: -100px;
   left: 5%;
+
+  @media (max-width: 58.75rem) {
+    font-size: 5.625rem;
+  }
 `

@@ -14,6 +14,10 @@ export const FeaturedsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3.125rem;
+
+  @media (max-width: 58.75rem) {
+    width: 80%;
+  }
 `
 
 export const FeaturedHeader = styled.div`
@@ -59,6 +63,13 @@ export const ProjectCards = styled.div`
     object-fit: contain;
     position: absolute;
   }
+
+  @media (max-width: 58.75rem) {
+    img {
+      object-fit: cover;
+      max-width: none;
+    }
+  }
 `
 
 export const ProjectDescriptions = styled.div`
@@ -103,6 +114,11 @@ export const PortfolioWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, 21.875rem);
   justify-content: space-between;
   gap: 1.25rem;
+
+  @media (max-width: 58.75rem) {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 18.4375rem);
+  }
 `
 
 export const ProjectNumber = styled.div`

@@ -107,6 +107,15 @@ export const ContactFields = styled.div`
   width: 80%;
   gap: 1.25rem;
 
+  .errorMsg {
+    border-bottom: 1px solid #dc3545;
+
+    &::placeholder {
+      font-weight: 700;
+      color: #dc3545;
+    }
+  }
+
   input,
   textarea {
     all: unset;

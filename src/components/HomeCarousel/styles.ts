@@ -31,6 +31,10 @@ export const CarouselWrapper = styled.section`
       min-height: 700px;
     }
   }
+
+  @media (max-width: 940px) {
+    width: 80%;
+  }
 `
 export const CarouselContent = styled.div`
   display: flex;
@@ -65,6 +69,10 @@ export const CarouselPages = styled.div`
       color: #fefffd;
     }
   }
+
+  @media (max-width: 940px) {
+    left: 0;
+  }
 `
 
 export const CarouselTextsContainer = styled.div`
@@ -80,6 +88,13 @@ export const CarouselTextsWrapper = styled.div`
   max-width: 43.75rem;
   height: 100%;
   padding: 10.75rem 1.25rem 0px 10.75rem;
+
+  @media (max-width: 940px) {
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
 
   .motionDiv {
     display: flex;
@@ -114,6 +129,19 @@ export const CarouselTextsWrapper = styled.div`
 
       &:hover {
         background-color: #535456;
+      }
+    }
+
+    @media (max-width: 58.75rem) {
+      width: 90%;
+      justify-content: center;
+
+      p {
+        width: 85%;
+      }
+
+      h1 {
+        font-size: 2.25rem;
       }
     }
   }

@@ -21,6 +21,11 @@ export const HeaderWrapper = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (max-width: 58.75rem) {
+    width: 80%;
+    gap: 2.375rem;
+  }
 `
 
 export const NavItens = styled.nav`
@@ -49,6 +54,10 @@ export const MenuList = styled.ul`
       color: #535456;
     }
   }
+
+  @media (max-width: 940px) {
+    gap: 1.125rem;
+  }
 `
 export const TopHomeIndicator = styled.div`
   align-items: center;
@@ -58,6 +67,10 @@ export const TopHomeIndicator = styled.div`
   right: 100%;
   min-height: 18.75rem;
   justify-content: space-between;
+
+  @media (max-width: 940px) {
+    right: 90%;
+  }
 `
 
 export const Line = styled.div`

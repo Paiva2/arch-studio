@@ -1,7 +1,7 @@
 import PageContainer from "../../components/PageContainer"
 import FadeComponent from "../../components/FadeComponent"
 import { Helmet } from "react-helmet"
-import { FormEvent, Fragment, useState } from "react"
+import { FormEvent, Fragment, useEffect, useState } from "react"
 import SubPagesBanner from "../../components/SubPagesBanner"
 import ArrowRight from "../../icons/ArrowRight"
 import {
@@ -25,15 +25,15 @@ const Contact = () => {
   const formDefault = {
     name: {
       value: "",
-      error: true,
+      error: false,
     },
     email: {
       value: "",
-      error: true,
+      error: false,
     },
     message: {
       value: "",
-      error: true,
+      error: false,
     },
   }
 
@@ -54,14 +54,18 @@ const Contact = () => {
 
   const checkFieldErrors = () => {
     Object.keys(contactFields).map((field) => {
-      setContactFields((oldValue) => ({
-        ...oldValue,
+      const fieldWithError = {
+        ...contactFields,
         [field]: {
-          value: oldValue[field as keyof typeof oldValue].value,
+          value: contactFields[field as keyof typeof contactFields].value,
           error:
-            oldValue[field as keyof typeof oldValue].value === "" ? true : false,
+            contactFields[field as keyof typeof contactFields].value === ""
+              ? true
+              : false,
         },
-      }))
+      }
+
+      setContactFields(fieldWithError)
     })
   }
 
@@ -73,18 +77,15 @@ const Contact = () => {
         error: oldValue[field as keyof typeof oldValue].error,
       },
     }))
-
-    checkFieldErrors()
   }
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+    checkFieldErrors()
 
     const { email, name, message } = contactFields
 
-    checkFieldErrors()
-
-    if (email.error || name.error || message.error) {
+    if (!email.value || !name.value || !message.value) {
       return Swal.fire({
         position: "center",
         icon: "error",
@@ -188,18 +189,21 @@ const Contact = () => {
                 onChange={(e) => handleChangeInputValue(e.target.value, "name")}
                 placeholder="Name"
                 type="text"
+                className={formDefault.name.error ? "errorMsg" : ""}
               />
               <input
                 value={contactFields.email.value}
                 onChange={(e) => handleChangeInputValue(e.target.value, "email")}
                 placeholder="Email"
                 type="email"
+                className={formDefault.email.error ? "errorMsg" : ""}
               />
               <FormFooter>
                 <textarea
                   value={contactFields.message.value}
                   onChange={(e) => handleChangeInputValue(e.target.value, "message")}
                   placeholder="Message"
+                  className={formDefault.message.error ? "errorMsg" : ""}
                 />
                 <div>
                   <button type="submit">

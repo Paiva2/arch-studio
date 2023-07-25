@@ -62,13 +62,34 @@ export const BigIdeasWrapper = styled.div`
         background-color: #535456;
       }
     }
+
+    @media (max-width: 58.75rem) {
+      justify-content: center;
+      width: 85%;
+      max-width: none;
+      padding: 0;
+
+      h1 {
+        font-size: 3.125rem;
+      }
+    }
+  }
+
+  @media (max-width: 940px) {
+    width: 80%;
   }
 `
 
 export const BigIdeasTextWrapper = styled.div`
+  display: flex;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
-  display: flex;
   z-index: 100;
+
+  @media (max-width: 940px) {
+    justify-content: center;
+    height: auto;
+    padding-left: 0.625rem;
+  }
 `

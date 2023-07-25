@@ -12,6 +12,10 @@ export const FooterWrapper = styled.div`
   width: 65%;
   max-width: 75rem;
   position: relative;
+
+  @media (max-width: 58.75rem) {
+    width: 100%;
+  }
 `
 
 export const FooterContents = styled.div`
@@ -38,6 +42,10 @@ export const FooterNavList = styled.ul`
 
   li {
     cursor: pointer;
+  }
+
+  @media (max-width: 940px) {
+    gap: 1.125rem;
   }
 `
 
