@@ -84,6 +84,7 @@ const HomeCarousel = () => {
                       {content.description}
                     </motion.p>
                     <motion.a
+                      href="/portfolio"
                       initial={{ opacity: 0, x: -200 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{
