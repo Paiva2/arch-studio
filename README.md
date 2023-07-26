@@ -33,5 +33,5 @@ Users should be able to:
 <img src="./public/desktopdemo3.png" />
 <img src="./public/desktopdemo4.png" />
 <img src="./public/desktopdemo5.png" />
-<img src="./public/desktopdemo6.png" />
+<img src="./public/desktopdemo6att.png" />
 <img src="./public/desktopdemo7.png" />
