@@ -60,6 +60,7 @@ export const SubPagesTexts = styled.div`
   }
 
   @media (max-width: 48rem) {
+    width: 95%;
     padding: 2.1875rem 0.3125rem;
     position: initial;
     padding-right: 0.9375rem;
@@ -96,6 +97,7 @@ export const TextsWrapper = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+    padding-right: 2.5rem;
 
     h3 {
       font-size: 1.875rem;

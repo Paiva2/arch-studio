@@ -21,8 +21,11 @@ import { Zoom } from "leaflet"
 import marker from "../../../public/custom-marker.png"
 import L from "leaflet"
 import Swal from "sweetalert2"
+import { useIsMobile } from "../../hooks/useMobile"
 
 const Contact = () => {
+  const isMobile = useIsMobile()
+
   const formDefault = {
     name: {
       value: "",
@@ -42,6 +45,7 @@ const Contact = () => {
 
   const pageData = {
     imageUrl: "https://i.postimg.cc/bwTXSZck/image-hero.jpg",
+    mobileImage: "https://i.postimg.cc/g2GqGgzm/telephone-mob.jpg",
     bigText: "Contact",
     title: "Tell us about your project",
     description:
@@ -125,7 +129,7 @@ const Contact = () => {
       <FadeComponent>
         <PageContainer>
           <SubPagesBanner
-            imageUrl={pageData.imageUrl}
+            imageUrl={isMobile ? pageData.mobileImage : pageData.imageUrl}
             bigText={pageData.bigText}
             title={pageData.title}
             description={pageData.description}
