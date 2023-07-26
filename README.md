@@ -28,7 +28,6 @@ Users should be able to:
 
 ### Screenshots
 
-<<<<<<< HEAD
 <img src="./public/desktopdemo1.png" />
 <img src="./public/desktopdemo2.png" />
 <img src="./public/desktopdemo3.png" />
@@ -36,5 +35,3 @@ Users should be able to:
 <img src="./public/desktopdemo5.png" />
 <img src="./public/desktopdemo6att.png" />
 <img src="./public/desktopdemo7.png" />
-=======
->>>>>>> 30d31bb7ccc8429a8655871f893c4946514b73b6
