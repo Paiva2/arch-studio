@@ -28,10 +28,3 @@ Users should be able to:
 
 ### Screenshots
 
-<img src="./public/desktopdemo1.png" />
-<img src="./public/desktopdemo2.png" />
-<img src="./public/desktopdemo3.png" />
-<img src="./public/desktopdemo4.png" />
-<img src="./public/desktopdemo5.png" />
-<img src="./public/desktopdemo6.png" />
-<img src="./public/desktopdemo7.png" />
