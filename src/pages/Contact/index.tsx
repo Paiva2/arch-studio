@@ -57,23 +57,6 @@ const Contact = () => {
     iconSize: [30, 35],
   })
 
-  const checkFieldErrors = () => {
-    Object.keys(contactFields).map((field) => {
-      const fieldWithError = {
-        ...contactFields,
-        [field]: {
-          value: contactFields[field as keyof typeof contactFields].value,
-          error:
-            contactFields[field as keyof typeof contactFields].value === ""
-              ? true
-              : false,
-        },
-      }
-
-      setContactFields(fieldWithError)
-    })
-  }
-
   const handleChangeInputValue = (value: string, field: string) => {
     setContactFields((oldValue) => ({
       ...oldValue,
@@ -84,21 +67,28 @@ const Contact = () => {
     }))
   }
 
+  const checkEmptyInputs = () => {
+    Object.keys(contactFields).forEach((field) => {
+      setContactFields((oldValue) => ({
+        ...oldValue,
+        [field]: {
+          value: oldValue[field as keyof typeof oldValue].value,
+          error: oldValue[field as keyof typeof oldValue].value ? false : true,
+        },
+      }))
+    })
+  }
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    checkFieldErrors()
 
-    const { email, name, message } = contactFields
+    const isThereAnyEmptyInput = !!Object.keys(contactFields).find((field) => {
+      return contactFields[field as keyof typeof contactFields].value === ""
+    })
 
-    if (!email.value || !name.value || !message.value) {
-      return Swal.fire({
-        position: "center",
-        icon: "error",
-        title: "Fill all the fields!",
-        showConfirmButton: false,
-        timer: 1500,
-      })
-    }
+    checkEmptyInputs()
+
+    if (isThereAnyEmptyInput) return
 
     Swal.fire({
       position: "center",
@@ -204,22 +194,28 @@ const Contact = () => {
                 onChange={(e) => handleChangeInputValue(e.target.value, "name")}
                 placeholder="Name"
                 type="text"
-                className={formDefault.name.error ? "errorMsg" : ""}
               />
+              {contactFields.name.error && (
+                <p className="errorMsg">Fill the name field!</p>
+              )}
               <input
                 value={contactFields.email.value}
                 onChange={(e) => handleChangeInputValue(e.target.value, "email")}
                 placeholder="Email"
                 type="email"
-                className={formDefault.email.error ? "errorMsg" : ""}
               />
+              {contactFields.email.error && (
+                <p className="errorMsg">Fill the email field!</p>
+              )}
               <FormFooter>
                 <textarea
                   value={contactFields.message.value}
                   onChange={(e) => handleChangeInputValue(e.target.value, "message")}
                   placeholder="Message"
-                  className={formDefault.message.error ? "errorMsg" : ""}
                 />
+                {contactFields.message.error && (
+                  <p className="errorMsg">Fill the message field!</p>
+                )}
                 <div>
                   <button type="submit">
                     <ArrowRight />
